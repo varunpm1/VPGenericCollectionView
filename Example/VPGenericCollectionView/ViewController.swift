@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     // All Optional setup variable/closures
     private func optionSetup() {
         // Optional - Minimum cell height to be used when the content is very minimal.
-        collectionView.minimumCellHeight = 100
+        collectionView.minimumCellHeight = 50
         
         // Optional - General collection view background color, insets, spacing
         collectionView.backgroundColor = .green
