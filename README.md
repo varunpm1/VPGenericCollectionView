@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/VPGenericCollectionView.svg?style=flat)](https://cocoapods.org/pods/VPGenericCollectionView)
 [![Platform](https://img.shields.io/cocoapods/p/VPGenericCollectionView.svg?style=flat)](https://cocoapods.org/pods/VPGenericCollectionView)
 
+# Important Note
+This is just designed for homogeneous cells and not heterogeneous (at least for now). So, if you're looking for that, then this might not work for your needs.
+
 
 # Why?
 If you're an iOS developer with couple of years of experience (like me), I can guarantee that you'll be tired with writing same set of code for initializing the collection view and it's cells. And when we plan to think of auto resizing cells (or self-sizing cells), it becomes pretty frustrating to write same/similar code in all places. This library, makes use of generics to write code once (which is already written inside this library 😉) and use multiple times.
