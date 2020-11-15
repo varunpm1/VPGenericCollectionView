@@ -1,5 +1,5 @@
 //
-//  GenericCollectionView.swift
+//  VPGenericCollectionView.swift
 //  VPGenericCollectionView
 //
 //  Created by Varun P M on 15/11/20.
@@ -8,56 +8,56 @@
 
 import UIKit
 
-protocol GenericCellProtocol where Self: UICollectionViewCell {
+public protocol VPGenericCellProtocol where Self: UICollectionViewCell {
     associatedtype Item
     
     var viewModel: Item? { get set }
 }
 
-final class GenericCollectionView<T: GenericCellProtocol>: UIView {
+final public class VPGenericCollectionView<T: VPGenericCellProtocol>: UIView {
     /// Optional callback to configure cell during cell setup
-    var configureCellCallback: ((_ cell: T, _ indexPath: IndexPath) -> Void)? {
+    public var configureCellCallback: ((_ cell: T, _ indexPath: IndexPath) -> Void)? {
         didSet {
             dataSource.configureCellCallback = configureCellCallback
         }
     }
     
     /// Optional callback to handle cell selection
-    var didSelectCallback: ((_ item: T.Item, _ indexPath: IndexPath) -> Void)? {
+    public var didSelectCallback: ((_ item: T.Item, _ indexPath: IndexPath) -> Void)? {
         didSet {
             dataSource.didSelectCallback = didSelectCallback
         }
     }
     
     /// Spacing between cells
-    var cellSpacing: CGFloat = 8 {
+    public var cellSpacing: CGFloat = 8 {
         didSet {
             (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.minimumLineSpacing = cellSpacing
         }
     }
     
     /// Background color for collection view
-    override var backgroundColor: UIColor? {
+    public override var backgroundColor: UIColor? {
         didSet {
             collectionView.backgroundColor = backgroundColor
         }
     }
     
     /// Insets to be considered when loading colelction view
-    var sectionInsets: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
+    public var sectionInsets: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
         didSet {
             (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionInset = sectionInsets
         }
     }
     
     /// Pass minimum cell height which can be taken by cell to avoid constraint break
-    var minimumCellHeight: CGFloat = 50 {
+    public var minimumCellHeight: CGFloat = 50 {
         didSet {
             (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize(width: maximumCellWidth, height: minimumCellHeight)
         }
     }
     
-    var maximumCellWidth: CGFloat = 50 {
+    public var maximumCellWidth: CGFloat = 50 {
         didSet {
             (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize(width: maximumCellWidth, height: minimumCellHeight)
         }
@@ -81,17 +81,17 @@ final class GenericCollectionView<T: GenericCellProtocol>: UIView {
         return genericCollectionView
     }()
     
-    override var intrinsicContentSize: CGSize {
+    public override var intrinsicContentSize: CGSize {
         return CGSize(width: bounds.size.width, height: max(collectionView.contentSize.height, shouldHideCollectionView ? 1 : minimumCellHeight)) // Pass a minimum value so as to calculate proper height when loaded from nib
     }
     
     // To avoid deallocating of data source.
-    private var dataSource: GenericCollectionViewDataSource<T>!
+    private var dataSource: VPGenericCollectionViewDataSource<T>!
     
     private var shouldHideCollectionView: Bool = false
     
-    init() {
-        self.dataSource = GenericCollectionViewDataSource()
+    public init() {
+        self.dataSource = VPGenericCollectionViewDataSource()
         
         super.init(frame: .zero)
         
@@ -100,7 +100,7 @@ final class GenericCollectionView<T: GenericCellProtocol>: UIView {
         collectionView.register(UINib(nibName: String(describing: T.self), bundle: nil), forCellWithReuseIdentifier: String(describing: T.self))
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         self.dataSource = nil
         
         super.init(coder: coder)
@@ -108,7 +108,7 @@ final class GenericCollectionView<T: GenericCellProtocol>: UIView {
         setupUI()
     }
     
-    func reload(items: [T.Item]) {
+    public func reload(items: [T.Item]) {
         shouldHideCollectionView = (items.count == 0)
         dataSource.reload(items: items)
         
@@ -119,7 +119,7 @@ final class GenericCollectionView<T: GenericCellProtocol>: UIView {
         addSubview(collectionView)
     }
     
-    private func updateDataSource(dataSource: GenericCollectionViewDataSource<T>) {
+    private func updateDataSource(dataSource: VPGenericCollectionViewDataSource<T>) {
         collectionView.dataSource = dataSource
         collectionView.delegate = dataSource
     }

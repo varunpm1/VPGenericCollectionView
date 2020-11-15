@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import VPGenericCollectionView
 
 class ViewController: UIViewController {
     
-    let collectionView = GenericCollectionView<SampleCollectionViewCell>()
+    let collectionView = VPGenericCollectionView<SampleCollectionViewCell>()
     
     override func viewDidLoad() {
         super.viewDidLoad()

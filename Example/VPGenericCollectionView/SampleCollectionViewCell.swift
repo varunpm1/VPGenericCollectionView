@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import VPGenericCollectionView
 
 // Confirm to GenericCellProtocol
-class SampleCollectionViewCell: UICollectionViewCell, GenericCellProtocol {
+class SampleCollectionViewCell: UICollectionViewCell, VPGenericCellProtocol {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var longLabel: UILabel!

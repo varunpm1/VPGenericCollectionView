@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VPGenericCollectionView'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A class which handles homogeneous collection view cell population and auto resize cells, with very less code.'
   s.description      = 'Auto resizable homogeneous collection view cells with cell population handled completely using Generics. Cell handling is completely driven by generics with very easy setup of collection view and cell.'
   s.homepage         = 'https://github.com/varunpm1/VPGenericCollectionView'

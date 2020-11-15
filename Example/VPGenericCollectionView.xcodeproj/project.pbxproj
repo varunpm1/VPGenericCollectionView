@@ -14,9 +14,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		719060236E511580E7C5E0BD /* Pods_VPGenericCollectionView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52645F1FA8F45D5D078C9B54 /* Pods_VPGenericCollectionView_Example.framework */; };
-		96929CBA2561A20B00697F1F /* GenericCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96929CB72561A20B00697F1F /* GenericCollectionViewDataSource.swift */; };
-		96929CBB2561A20B00697F1F /* GenericCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96929CB82561A20B00697F1F /* GenericCollectionView.swift */; };
-		96929CBC2561A20B00697F1F /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96929CB92561A20B00697F1F /* UICollectionView+Extension.swift */; };
 		96929CBF2561A21500697F1F /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96929CBD2561A21500697F1F /* SampleCollectionViewCell.swift */; };
 		96929CC02561A21500697F1F /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96929CBE2561A21500697F1F /* SampleCollectionViewCell.xib */; };
 		AF62DF468714B3C49FE4A197 /* Pods_VPGenericCollectionView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1B6B5DC2D43658D3F95F21 /* Pods_VPGenericCollectionView_Tests.framework */; };
@@ -48,9 +45,6 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		70EBB9CBDE8461C032297FE1 /* Pods-VPGenericCollectionView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPGenericCollectionView_Example.debug.xcconfig"; path = "Target Support Files/Pods-VPGenericCollectionView_Example/Pods-VPGenericCollectionView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		96929CB72561A20B00697F1F /* GenericCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		96929CB82561A20B00697F1F /* GenericCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCollectionView.swift; sourceTree = "<group>"; };
-		96929CB92561A20B00697F1F /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		96929CBD2561A21500697F1F /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		96929CBE2561A21500697F1F /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
 		B0C9AD82F6F1B3807ED7097D /* Pods-VPGenericCollectionView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPGenericCollectionView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-VPGenericCollectionView_Tests/Pods-VPGenericCollectionView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,7 +112,6 @@
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				96929CBD2561A21500697F1F /* SampleCollectionViewCell.swift */,
 				96929CBE2561A21500697F1F /* SampleCollectionViewCell.xib */,
-				96929CB62561A20B00697F1F /* Generic Resizable Collection View */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -161,16 +154,6 @@
 				B8B16F5E5FC42C854D41D12B /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		96929CB62561A20B00697F1F /* Generic Resizable Collection View */ = {
-			isa = PBXGroup;
-			children = (
-				96929CB72561A20B00697F1F /* GenericCollectionViewDataSource.swift */,
-				96929CB82561A20B00697F1F /* GenericCollectionView.swift */,
-				96929CB92561A20B00697F1F /* UICollectionView+Extension.swift */,
-			);
-			path = "Generic Resizable Collection View";
 			sourceTree = "<group>";
 		};
 		D4D635A29C41E03E572C9F60 /* Frameworks */ = {
@@ -355,9 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				96929CBC2561A20B00697F1F /* UICollectionView+Extension.swift in Sources */,
-				96929CBA2561A20B00697F1F /* GenericCollectionViewDataSource.swift in Sources */,
-				96929CBB2561A20B00697F1F /* GenericCollectionView.swift in Sources */,
 				96929CBF2561A21500697F1F /* SampleCollectionViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

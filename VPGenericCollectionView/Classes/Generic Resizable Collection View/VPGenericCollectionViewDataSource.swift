@@ -1,5 +1,5 @@
 //
-//  GenericCollectionViewDataSource.swift
+//  VPGenericCollectionViewDataSource.swift
 //  VPGenericCollectionView
 //
 //  Created by Varun P M on 15/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class GenericCollectionViewDataSource<T: GenericCellProtocol>: NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+final class VPGenericCollectionViewDataSource<T: VPGenericCellProtocol>: NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     var configureCellCallback: ((_ cell: T, _ indexPath: IndexPath) -> Void)?
     
     var didSelectCallback: ((_ item: T.Item, _ indexPath: IndexPath) -> Void)?
