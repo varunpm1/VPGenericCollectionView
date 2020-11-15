@@ -1,6 +1,6 @@
 # VPGenericCollectionView
 
-[![CI Status](https://img.shields.io/travis/varun-pm-bestfit/VPGenericCollectionView.svg?style=flat)](https://travis-ci.org/varun-pm-bestfit/VPGenericCollectionView)
+[![CI Status](https://img.shields.io/travis/varunpm1/VPGenericCollectionView.svg?style=flat)](https://travis-ci.org/varunpm1/VPGenericCollectionView)
 [![Version](https://img.shields.io/cocoapods/v/VPGenericCollectionView.svg?style=flat)](https://cocoapods.org/pods/VPGenericCollectionView)
 [![License](https://img.shields.io/cocoapods/l/VPGenericCollectionView.svg?style=flat)](https://cocoapods.org/pods/VPGenericCollectionView)
 [![Platform](https://img.shields.io/cocoapods/p/VPGenericCollectionView.svg?style=flat)](https://cocoapods.org/pods/VPGenericCollectionView)
@@ -22,7 +22,7 @@ pod 'VPGenericCollectionView'
 
 ## Author
 
-varun-pm-bestfit, developer.varunpm@gmail.com
+varunpm1, varun.pm1@gmail.com
 
 ## License
 

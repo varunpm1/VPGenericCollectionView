@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## VPGenericCollectionView
 
-Copyright (c) 2020 varun-pm-bestfit <developer.varunpm@gmail.com>
+Copyright (c) 2020 varunpm1 <varun.pm1@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

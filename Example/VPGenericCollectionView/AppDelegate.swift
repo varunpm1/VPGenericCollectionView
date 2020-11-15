@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  VPGenericCollectionView
 //
-//  Created by varun-pm-bestfit on 11/15/2020.
-//  Copyright (c) 2020 varun-pm-bestfit. All rights reserved.
+//  Created by Varun P M on 15/11/20.
+//  Copyright © 2020 Varun P M. All rights reserved.
 //
 
 import UIKit
