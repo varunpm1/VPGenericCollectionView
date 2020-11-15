@@ -1,5 +1,5 @@
 PODS:
-  - VPGenericCollectionView (0.1.0)
+  - VPGenericCollectionView (0.3.0)
 
 DEPENDENCIES:
   - VPGenericCollectionView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VPGenericCollectionView: d816d75a81eed83ae479f11e77ba430c788bfdcf
+  VPGenericCollectionView: e0d8d0805a5e8498bf8caa993918b953ea519442
 
 PODFILE CHECKSUM: 05308304f47e1d930bcfd826a52c0d1bb07ef952
 
