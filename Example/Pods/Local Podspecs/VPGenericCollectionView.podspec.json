@@ -1,0 +1,22 @@
+{
+  "name": "VPGenericCollectionView",
+  "version": "0.1.0",
+  "summary": "A short description of VPGenericCollectionView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/varun-pm-bestfit/VPGenericCollectionView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "varun-pm-bestfit": "developer.varunpm@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/varun-pm-bestfit/VPGenericCollectionView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "VPGenericCollectionView/Classes/**/*"
+}

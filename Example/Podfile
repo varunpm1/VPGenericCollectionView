@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'VPGenericCollectionView_Example' do
+  pod 'VPGenericCollectionView', :path => '../'
+
+  target 'VPGenericCollectionView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

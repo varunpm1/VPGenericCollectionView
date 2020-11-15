@@ -1,0 +1,16 @@
+PODS:
+  - VPGenericCollectionView (0.1.0)
+
+DEPENDENCIES:
+  - VPGenericCollectionView (from `../`)
+
+EXTERNAL SOURCES:
+  VPGenericCollectionView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VPGenericCollectionView: f69ce6886df62e8f39dc0434d3c67321ff9e3260
+
+PODFILE CHECKSUM: 9866c3893081053ab21c6c253da519ae6603bbac
+
+COCOAPODS: 1.9.3
