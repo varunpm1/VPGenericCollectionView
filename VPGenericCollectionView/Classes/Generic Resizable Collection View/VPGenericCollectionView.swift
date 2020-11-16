@@ -46,20 +46,21 @@ final public class VPGenericCollectionView<T: VPGenericCellProtocol>: UIView {
     /// Insets to be considered when loading colelction view
     public var sectionInsets: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
         didSet {
-            (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionInset = sectionInsets
+            updateCollectionViewLayoutValues()
         }
     }
     
     /// Pass minimum cell height which can be taken by cell to avoid constraint break
     public var minimumCellHeight: CGFloat = 50 {
         didSet {
-            (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize(width: maximumCellWidth, height: minimumCellHeight)
+            updateCollectionViewLayoutValues()
         }
     }
     
+    /// Pass the required maxCellWidth which has to be constrained with expandable height
     public var maximumCellWidth: CGFloat = 50 {
         didSet {
-            (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize(width: maximumCellWidth, height: minimumCellHeight)
+            updateCollectionViewLayoutValues()
         }
     }
     
@@ -122,5 +123,10 @@ final public class VPGenericCollectionView<T: VPGenericCellProtocol>: UIView {
     private func updateDataSource(dataSource: VPGenericCollectionViewDataSource<T>) {
         collectionView.dataSource = dataSource
         collectionView.delegate = dataSource
+    }
+    
+    private func updateCollectionViewLayoutValues() {
+        (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionInset = sectionInsets
+        (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize = CGSize(width: maximumCellWidth - sectionInsets.left - sectionInsets.right, height: minimumCellHeight)
     }
 }

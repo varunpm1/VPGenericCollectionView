@@ -17,16 +17,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // Set frame with auto resizing mask or constraints whichever is appropriate
+        collectionView.maximumCellWidth = UIScreen.main.bounds.size.width / 2
         collectionView.frame = view.bounds
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        // Add the view as subview to self.view or container view
         view.addSubview(collectionView)
         
-        // Pass the required maxCellWidth which has to be constrained with expandable height
-        collectionView.maximumCellWidth = UIScreen.main.bounds.size.width / 2
+        optionSetup()
         
+        // Dummy
         let data = [("title1", loremIpsum()),
                     ("title1", loremIpsum()),
                     ("title1", loremIpsum()),
@@ -36,21 +34,15 @@ class ViewController: UIViewController {
         
         // Call reload whenver we have proper data
         collectionView.reload(items: data)
-        
-        optionSetup()
     }
     
     // All Optional setup variable/closures
     private func optionSetup() {
-        // Optional - Minimum cell height to be used when the content is very minimal.
-        collectionView.minimumCellHeight = 50
-        
-        // Optional - General collection view background color, insets, spacing
+        collectionView.minimumCellHeight = 60 // Here 59 is minimum required height for the cell - Title Label top space (8) + Long Label top and bottom space (8 + 8) + dummy view height constraint (35). Rounded it to 60. Anything below 59 will result in constraint breaks
         collectionView.backgroundColor = .green
         collectionView.sectionInsets = UIEdgeInsets(top: 100, left: 0, bottom: 50, right: 0)
         collectionView.cellSpacing = 20
         
-        // Optional - Define this closure if something has to be updated on top of normal viewModel based customization, eg., add/remove subviews, handle some condition based on indexPath etc
         collectionView.configureCellCallback = { cell, indexPath in
             if indexPath.item == 0 {
                 cell.titleLabel.backgroundColor = .red
@@ -59,7 +51,6 @@ class ViewController: UIViewController {
             }
         }
         
-        // Optional - Define this closure if didselect of cell has to be handled
         collectionView.didSelectCallback = { data, indexPath in
             if indexPath.item == 1 {
                 print("Detected second cell tap")
