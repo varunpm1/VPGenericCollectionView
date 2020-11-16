@@ -15,6 +15,9 @@ final class VPGenericCollectionViewDataSource<T: VPGenericCellProtocol>: NSObjec
     
     private var items: [T.Item] = []
     
+    // Stores the width constraints which can be easier to access instead of looping through constraints of contentView using identifier
+    private var constraintsDataSource: [String: NSLayoutConstraint] = [:]
+    
     func reload(items: [T.Item]) {
         self.items = items
     }
@@ -34,15 +37,12 @@ final class VPGenericCollectionViewDataSource<T: VPGenericCellProtocol>: NSObjec
         cell.viewModel = items[indexPath.item]
         configureCellCallback?(cell, indexPath)
         
-        cell.contentView.constraints.filter { constraint -> Bool in
-            constraint.identifier == "GenericCellConstraintIdentifier"
-        }.forEach { constraint in
-            constraint.isActive = false
-        }
+        constraintsDataSource["\(indexPath.section)+\(indexPath.item)"]?.isActive = false
         
         let widthConstraint = cell.contentView.widthAnchor.constraint(equalToConstant: (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.estimatedItemSize.width ?? 0)
-        widthConstraint.identifier = "GenericCellConstraintIdentifier"
         widthConstraint.isActive = true
+        
+        constraintsDataSource["\(indexPath.section)+\(indexPath.item)"] = widthConstraint
         
         return cell
     }
